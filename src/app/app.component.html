@@ -1,0 +1,30 @@
+<p style="background: aqua">Hello World</p>
+<h1>hghg</h1>
+<input type="email">
+<button>hoo</button>
+
+
+<div></div>
+<section></section>
+
+<div *ngFor="let nation of ['italia','madonna']">
+  {{nation}}
+</div>
+
+<select>
+  <option *ngFor="let nation of ['italia','madonna']">
+    {{nation}}
+  </option>
+</select>
+
+<button *ngIf="false"> Prova </button>
+
+
+
+
+
+<input type="text" [(ngModel)]="titlee" (ngModelChange)="getitle($event)" />
+
+<select [(ngModel)]="titlee"  (ngModelChange)="getitle($event)">
+  <option *ngFor="let nation of ['Italy','Germany',titlee]">{{nation}}</option>
+</select>
