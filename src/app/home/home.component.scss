@@ -14,7 +14,6 @@
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: -1;
   }
 
   .sector-container {
@@ -122,3 +121,10 @@
         }
       }
     }
+
+
+.button--janus span {
+  display: block;
+  transition: transform 0.3s ease;
+  mix-blend-mode: difference;
+}

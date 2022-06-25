@@ -19,7 +19,7 @@
     <div class="sector-container" *ngIf="showSector" [ngClass]="{'background': showSector ? 'transparent': 'hidden'}">
       <div class="sector-row">
         <div class="element-sector" *ngFor="let voice of listVoiceToolbar">
-          <p class="sector-descritption">{{voice.description}}</p>  
+          <button class="button button--janus"><span>{{voice.description}}</span></button>
         </div>
       </div>
     </div>
