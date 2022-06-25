@@ -15,12 +15,14 @@
     <video class="background-video" type="video/mp4" #video (loadedmetadata)="onMetadata(video)" playsinline autoplay muted poster="./assets/Immagine/river.jpg">
       <source src="../../assets/Video/river.mp4" type="video/mp4">
     </video>
-  </div>
-  <div class="sector-container" *ngIf="showSector" [ngClass]="{'background': showSector ? 'transparent': 'hidden'}">
-    <div class="sector-row">
-      <div class="element-sector" *ngFor="let voice of listVoiceToolbar">
-        <p class="sector-descritption">{{voice.description}}</p>  
+
+    <div class="sector-container" *ngIf="showSector" [ngClass]="{'background': showSector ? 'transparent': 'hidden'}">
+      <div class="sector-row">
+        <div class="element-sector" *ngFor="let voice of listVoiceToolbar">
+          <p class="sector-descritption">{{voice.description}}</p>  
+        </div>
       </div>
     </div>
   </div>
+
   </section>
