@@ -12,8 +12,4 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onMetadata(e:any, video:any) {
-    console.log('metadata: ', e);
-    console.log('duration: ', video.duration);
-  }
 }
