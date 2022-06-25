@@ -1,4 +1,13 @@
 .background-container {
+
+}
+
+.mat-toolbar {
+  background: rgb(19,196,31);
+  color: #000;
+}
+
+.background-video{
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -8,9 +17,4 @@
   top: 0;
   bottom: 0;
   z-index: -1;
-}
-
-.mat-toolbar {
-  background: rgb(19,196,31);
-  color: #000;
 }
