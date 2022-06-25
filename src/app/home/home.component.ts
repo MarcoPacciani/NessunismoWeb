@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { voiceTolbar } from './interface';
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import { voiceTolbar } from './interface';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  public showSector: boolean = false;
 
   public listVoiceToolbar:voiceTolbar[] = [
     {description: "Nessuno Produce", active:false},
@@ -16,10 +19,18 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-  onMetadata(e:any, video:any) {
-    console.log('metadata: ', e);
-    console.log('duration: ', video.duration);
+  public onMetadata(video:any) {
+    this.showSectorNessunismo(video.duration);
   }
+
+
+  private showSectorNessunismo(duration:number){
+    const timeMilliSecond: number = duration * 1000;
+    setTimeout(() => {
+      this.showSector = true;
+    }, timeMilliSecond);
+  } 
 }
