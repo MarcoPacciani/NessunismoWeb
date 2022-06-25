@@ -1,12 +1,14 @@
 <section class="home-section">
-<mat-toolbar color="primary">
-  <p>Nessunismo</p>
-  <ng-container *ngFor="let voice of listVoiceToolbar">
-    <div class="voice-container" (onmouseover)="voice.active = !voice.active" (onmouseleave)="voice.active = !voice.active">
-      <p>{{voice.description}}</p>
-      <mat-divider *ngIf="voice.active"></mat-divider>
-    </div>
+<mat-toolbar color="primary" class="toolbar-container">
+  <p>Logo</p>
+  <div class="voice-container">
+    <ng-container *ngFor="let voice of listVoiceToolbar">
+      <div class="voice-element" (mouseover)="voice.active = !voice.active" (mouseout)="voice.active = !voice.active">
+        <p>{{voice.description}}</p>
+        <mat-divider *ngIf="voice.active"></mat-divider>
+      </div>
     </ng-container>
+  </div>
 </mat-toolbar>
   <div class="background-container">
     <video class="background-video" autoplay loop muted poster="./assets/Immagine/river.jpg">
