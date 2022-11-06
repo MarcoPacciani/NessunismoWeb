@@ -16,6 +16,12 @@ import { NessunoStileComponent } from './nessuno-stile/nessuno-stile.component';
 import { ManagmentComponent } from './managment/managment.component';
 import { environment } from 'src/environments/environment.prod';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18/", ".json");
 }
@@ -29,6 +35,7 @@ export function createTranslateLoader(http: HttpClient) {
     ManagmentComponent
   ],
     imports: [
+        AngularFireModule.initializeApp(environment.firebase),
         BrowserModule,
         FormsModule,
         RouterModule,
