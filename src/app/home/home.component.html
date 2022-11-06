@@ -1,7 +1,7 @@
 <section class="home-section">
 <mat-toolbar color="primary" class="toolbar-container">
   <div class="logo-container">
-    <img src="../../assets/Immagine/NessunismoLogo.png" class="logo">
+    <img src="../../assets/Immagine/NessunismoLogo.png" class="logo" alt="">
   </div>
   <div class="voice-container">
     <ng-container *ngFor="let voice of listVoiceToolbar">
@@ -12,16 +12,27 @@
   </div>
 </mat-toolbar>
   <div class="background-container">
-    <video class="background-video" type="video/mp4" #video (loadedmetadata)="onMetadata(video)" playsinline autoplay muted poster="./assets/Immagine/river.jpg">
-      <source src="../../assets/Video/river.mp4" type="video/mp4">
-    </video>
 
-    <div class="sector-container" *ngIf="showSector" [ngClass]="{'background': showSector ? 'transparent': 'hidden'}">
+    <div @fade (@fade.done)="animationEnd()" class="logo-element">
+      <img  style="width: 15rem;"
+            src="../../assets/Immagine/NessunismoLogo.png" alt="" >
+      <p id="start" style="font-weight: bold;
+    font-size: x-large;">Nessunismo</p>
+    </div>
+
+
+    <div  class="sector-container" *ngIf="showSector" [ngClass]="{'background': showSector ? 'transparent': 'hidden'}">
+
       <div class="sector-row">
         <div class="element-sector" *ngFor="let voice of listVoiceToolbar">
-          <button class="button button--janus"><span>{{voice.description}}</span></button>
+          <button @fade (click)="goToPage(voice.url)"
+                  (@fade.start)="createLine(voice.id)" [id]="voice.id" class="button button--janus"><span>{{voice.description}}</span></button>
         </div>
       </div>
+    </div>
+
+    <div>
+      <p @fade *ngIf="showSector" style="font-style: oblique; font-weight:bold;font-size: 1.3em;padding: 0 2em;">{{"nessunismo.home.phrase" | translate}}</p>
     </div>
   </div>
 

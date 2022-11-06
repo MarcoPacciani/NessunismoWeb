@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nessunismo-test": {
+      "hosting": {
+        "NessunismoWeb": [
+          "nessunismo-test"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nessunismo-test"
+  }
+}

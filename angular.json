@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "skipTests": true
         }
       },
       "root": "",
@@ -30,20 +30,22 @@
               "src/custom-theme.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/leader-line/leader-line.min.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 }
               ],
               "fileReplacements": [
@@ -98,6 +100,16 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "NessunismoWeb:build:production",
+            "firebaseProject": "nessunismo-test",
+            "firebaseHostingSite": "nessunismo-test"
           }
         }
       }

@@ -1,50 +1,50 @@
-.mat-toolbar {
-  background: rgb(19,196,31);
-  color: #000;
-}
-
-.background-container {
-
-  .background-video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    //position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  .mat-toolbar {
+    color: #000;
   }
 
-  .sector-container {
-    position: absolute;
-    top: 50vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  .background-container {
 
-    .sector-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6.5em;
+
+    .logo-element{
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 20px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
 
-      .sector-descritption {
-        background: orange;
-        width: fit-content;
-        height: fit-content;
+    }
+    .sector-container {
+      position: relative;
+
+      .sector-row {
         display: flex;
-        align-items: center;
+        flex-direction: row;
         justify-content: center;
-        padding: 5px;
+        gap: 20px;
+
+        .sector-descritption {
+          background: orange;
+          width: fit-content;
+          height: fit-content;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+        }
       }
     }
   }
 }
-
-/* Navbar section */
-
-
 
 .mat-toolbar div.logo-container{
   width: 100%;
@@ -66,13 +66,10 @@
   color: #c0c0c0;
 }
 
-
-
 .logo{
   width: 50px;
   height: 50px;
 }
-
   .mat-toolbar {
     background: #dbd9d9;
     display: flex;
