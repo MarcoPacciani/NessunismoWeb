@@ -1,0 +1,163 @@
+<swiper
+  [config]="config"
+  class="mySwiper"
+>
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 1 + ".title" | translate}}
+        </p>
+      </div>
+      <img style="width: 47rem;"
+            src="../../assets/Immagine/NessunismoLogoNaso.png" alt="" >
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 2 + ".content" | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 2 + ".title" | translate}}
+        </p>
+      </div>
+      <img style="width: 47rem;"
+           src="../../assets/Immagine/opereLorenzo.png" alt="" >
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 2 + ".content" | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 3 + ".title" | translate}}
+        </p>
+      </div>
+
+      <img  style="width: 15rem;"
+            src="../../assets/Immagine/NessunismoLogo.png" alt="" >
+
+      <div class="phrase">
+
+        {{"nessunismo.naso.slide" + 3 + ".phrase" | translate}}
+
+      </div>
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 3 + ".content" | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 4 + ".title" | translate}}
+        </p>
+      </div>
+
+      <img style="width: 22rem;"
+           src="../../assets/Immagine/missione.png" alt="" >
+
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 4 + ".content" | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 5 + ".title" | translate}}
+        </p>
+      </div>
+
+      <img style="width: 47rem;"
+           src="../../assets/Immagine/isola.png" alt="" >
+
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 5 + ".content" | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 6 + ".title" | translate}}
+        </p>
+      </div>
+
+      <img style="width: 22rem;"
+           src="../../assets/Immagine/progetto.png" alt="" >
+
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 6 + ".content" | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 7 + ".title" | translate}}
+        </p>
+      </div>
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 7 + ".content" | translate}}
+        </p>
+      </div>
+      <div class="sub-content">
+        <ng-container *ngFor="let content of ['creative','esposition','commercial']">
+          <div class="sub-content-container">
+            <div class="img">
+              <img  style="width: 15rem;"
+                    [src]="'../../assets/Immagine/' + content +'.png'" alt="" >
+            </div>
+            <div class="content">
+              <p class="title">{{"nessunismo.naso.slide" + 7 + ".cicly." + content + ".title" | translate}}</p>
+              <p class="description">{{"nessunismo.naso.slide" + 7 + ".cicly." + content + ".content" | translate}}</p>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="container">
+      <div class="title">
+        <p>
+          {{"nessunismo.naso.slide" + 8 + ".title" | translate}}
+        </p>
+      </div>
+      <div class="content">
+        <p>
+          {{"nessunismo.naso.slide" + 8 + ".content" | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+</swiper>

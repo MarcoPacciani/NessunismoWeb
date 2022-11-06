@@ -1,0 +1,48 @@
+.mySwiper {
+  height: 100%;
+  display: block;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+  gap:2em;
+
+  .title {
+    font-size: xxx-large;
+    margin-top: 0.5em;
+    font-family: 'Gilroy-Bold', sans-serif;
+  }
+
+  .content {
+    font-style: oblique;
+    font-size: medium;
+    line-height: 2em;
+    padding: 0 5em;
+  }
+
+  .phrase {
+    font-size: x-large;
+    font-style: oblique;
+    text-decoration: underline;
+  }
+
+  .sub-content{
+    .sub-content-container{
+      display: grid;
+      grid-template-columns: 10em 1fr;
+      align-items: center;
+      .content{
+        .title{
+          font-weight: bold;
+        }
+        .description{
+
+        }
+      }
+    }
+  }
+
+}
